@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tienda camisetas deportivas{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">⚽ SoccerStore</div>
+    <ul class="nav-links">
+        <li><a href="{% url 'app1:inicio' %}">Inicio</a></li>
+        <li><a href="{% url 'app1:catalogo' %}">Catálogo</a></li>
+         <li><a href="{% url 'app2:ofertas' %}">Ofertas</a></li>
+        <li><a href="{% url 'app2:contacto' %}">Contacto</a></li>
+        
+    </ul>
+</nav>
+
+<main class="container">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>
